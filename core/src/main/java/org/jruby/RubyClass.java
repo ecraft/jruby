@@ -1582,7 +1582,7 @@ public class RubyClass extends RubyModule {
         // If we get here, there's some other class in this classloader hierarchy with the same name. In order to
         // avoid a naming conflict, we set reified class to parent and skip reification.
         if (RubyInstanceConfig.REIFY_LOG_ERRORS) {
-            LOG.error("failed to reify class " + getName() + " due to: ", failure);
+            LOG.warn("failed to reify class " + getName() + " due to: ", failure);
         }
 
         if (superClass.reifiedClass != null) {
